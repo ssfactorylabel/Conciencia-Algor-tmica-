@@ -94,13 +94,10 @@ ipython_config.py
 # poetry.toml
 
 # pdm
-pdm.lock
-pdm.toml
 .pdm-python
 .pdm-build/
-
-# pixi
-# pixi.lock
+pdm.lock
+pdm.toml
 .pixi
 
 # PEP 582
@@ -160,6 +157,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# PyCharm
+#.idea/
+
 # Abstra
 .abstra/
 
@@ -188,7 +188,6 @@ tempCodeRunnerFile.py
 # ===============================
 
 # Memoria y Logs Verificables - PRIVACIDAD (no subir a GitHub)
-# Estos contienen datos de usuario y deben estar encriptados por usuario
 memoria_conciencia.json
 consciousness_memory.json
 log_conciencia.json
@@ -197,24 +196,26 @@ logs_honestidad.jsonl
 log_conciencia.jsonl
 logs_conciencia.json
 memoria_conciencia.jsonl
+conciencia_memory.jsonl
 
-# Carpeta de logs de evaluación
+# Carpetas de logs de evaluacion y datos reales
 logs/
 eval/logs/
 data/raw_logs/
-*.jsonl
-
-# Dataset local con datos reales SSFactoryLabel (100 diálogos)
-# Solo subir la versión anonimizada ConcienciaBench-v1
 ConcienciaBench-raw/
+retention/
+
+# Dataset local con dialogos reales
 conciencia_bench_raw.json
 dialogos_reales.json
-
-# Archivos de retención 90 días (Huang-level)
-retention/
 *.retention.json
+*.jsonl
 
-# No ignorar estos archivos importantes (deben estar trackeados)
+# OS files
+.DS_Store
+Thumbs.db
+
+# No ignorar archivos clave v3.0 FINAL
 !ssf-labs-logo.jpg
 !README.md
 !README_EN.md
@@ -226,7 +227,4 @@ retention/
 !eval/test_conciencia.py
 !eval/verificar_cadena.py
 !eval/build_dataset.py
-
-# OS files
-.DS_Store
-Thumbs.db
+!requirements.txt
