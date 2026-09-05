@@ -1,0 +1,11 @@
+# requirements.txt v3.0 - Honest Edition
+# SSF LABS / SSFactoryLabel Research
+# No external dependencies - stdlib only
+# Built for Samsung Galaxy A07 Termux - +8.3ms latency target
+# Python 3.11+
+
+# Core: stdlib only (json, hashlib, os, datetime, time, tempfile)
+# No pip install needed
+
+# Optional for local eval (not required in Termux):
+# pytest>=7.0.0  # only if you want pytest
