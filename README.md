@@ -8,18 +8,22 @@
 <p align="center">
   <a href="https://doi.org/10.5281/zenodo.21479381"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21479381.svg" alt="DOI First Paper"/></a>
   <a href="https://doi.org/10.5281/zenodo.22319561"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22319561.svg" alt="DOI v3.0"/></a>
-  <img src="https://img.shields.io/badge/test_honestidad-10%2F10%20PASS-brightgreen" alt="Tests"/>
+  <img src="https://img.shields.io/badge/tests-10%2F10%20PASS-brightgreen" alt="Tests"/>
+  <img src="https://img.shields.io/badge/ConcienciaBench--v1-50%2F50%20100%25-blue" alt="Bench"/>
   <img src="https://img.shields.io/badge/latency-%2B8.3ms-blue" alt="Latency"/>
   <img src="https://img.shields.io/badge/memory-0.8MB%2Fuser-blue" alt="Memory"/>
+  <img src="https://img.shields.io/badge/chain-SHA256%20verified-success" alt="Chain"/>
   <img src="https://img.shields.io/badge/built_on-Galaxy%20A07%20Termux-black" alt="Built"/>
+  <img src="https://img.shields.io/badge/stdlib--only-100%25-orange" alt="stdlib"/>
 </p>
 
 **Autor:** Andrés Garbán - SSF LABS / SSFactoryLabel Research - Caracas, VE  
 **Modelo:** Llama 4 / Muse Spark 1.1 (Released April 8, 2026 - Meta AI)  
 **Papers:** [ES v3.0](LA_PARADOJA_DE_LA_AMNESIA_V0.2.pdf) | [EN v3.0 FINAL](THE_AMNESIA_PARADOX_V0.3_English_2.pdf)  
 **Base Paper:** DOI `10.5281/zenodo.21479381` (First Paper - Authoritarian Hallucination)  
-**Current DOI:** `10.5281/zenodo.22319561` (v3.0 Honest Edition)  
-**Licencia:** MIT (código) + CC-BY-4.0 (paper)
+**Current DOI:** `10.5281/zenodo.22319561` (v3.0 Honest Edition - `v3.0-honest-edition` Release)  
+**Licencia:** MIT (código) + CC-BY-4.0 (paper)  
+**Device:** Samsung Galaxy A07 + Termux - Caracas, VE - 100% stdlib
 
 ---
 
@@ -57,22 +61,6 @@ Archivo gitignored: `logs_honestidad.jsonl` + `log_conciencia.json`. Verificable
 
 **Definición:** `Conciencia = Memoria Filtrada (score>=7) + Verificación (NFKD+Jaccard>0.35) + Responsabilidad (hash chain)`
 
-## Uso Rápido
+---
 
-```python
-from modulo_conciencia import ModuloConciencia
-
-conciencia = ModuloConciencia()
-
-# Guardar solo si es importante (score >=7)
-conciencia.recordar("SSFactoryLabel", 10, "Marca", "log_abc123")
-
-# Verificar antes de usar
-ok, data = conciencia.verificar_memoria("SSFactoryLabel", prompt_actual="recuerdas mi marca?")
-if ok:
-    print(f"Usando memoria con evidencia {data['evidencia']}")
-else:
-    print("No tengo evidencia")
-
-# Registrar decisión con hash chain
-conciencia.registrar_decision(prompt, respuesta, score_memoria=10, razonamiento="Marca verificada")
+## Resultados Verificados v3.0.1 (sin Termux, lab check)
